@@ -21,10 +21,6 @@ export class ChatService {
     @Inject('AUTH_SERVICE') private readonly authService: ClientProxy,
   ) {}
 
-  getHello(): string {
-    return 'Hello World!';
-  }
-
   private async getUser(id: number) {
     const ob$ = this.authService.send<UserEntity>(
       {
